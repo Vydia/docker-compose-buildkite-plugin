@@ -380,6 +380,8 @@ elif [[ ${#command[@]} -gt 0 ]] ; then
   done
 fi
 
+. "$DIR/../commands/run_on_host_when_container_ready.sh" &
+
 # Disable -e outside of the subshell; since the subshell returning a failure
 # would exit the parent shell (here) early.
 set +e
